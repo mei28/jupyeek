@@ -1,4 +1,3 @@
-import React from "react";
 import { VStack, Text } from "@yamada-ui/react";
 import { Dropzone, DropzoneProps } from "@yamada-ui/dropzone";
 import { useState } from "react";

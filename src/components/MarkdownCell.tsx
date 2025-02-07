@@ -1,4 +1,3 @@
-import React from "react";
 import { Box } from "@yamada-ui/react";
 import ReactMarkdown from "react-markdown";
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Box, Image, Button } from "@yamada-ui/react";
 
 type OutputCellProps = {

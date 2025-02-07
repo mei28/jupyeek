@@ -4,7 +4,7 @@ import { VStack, Heading, Button, Box } from "@yamada-ui/react";
 import { FileUploader } from "../components/FileUploader";
 
 export const Home = () => {
-  const [notebookData, setNotebookData] = useState<any | null>(null);
+  const [_, setNotebookData] = useState<any | null>(null);
   const navigate = useNavigate();
 
   const handleFileLoaded = (data: any) => {
