@@ -15,7 +15,7 @@ export const OutputCell = ({ output }: OutputCellProps) => {
   if (output.output_type === "execute_result" || output.output_type === "display_data") {
     const data = output.data || {};
 
-    // ✅ `image/png` があるなら、それを優先して表示
+    // ✅ `image/png` があるなら、それを最優先で表示
     if (data["image/png"]) {
       const base64Image = `data:image/png;base64,${data["image/png"]}`;
       return (
@@ -31,10 +31,44 @@ export const OutputCell = ({ output }: OutputCellProps) => {
       );
     }
 
-    // ✅ Pandas DataFrame の `text/html` をテーブルとしてレンダリング
+    // ✅ `text/html` (Pandas DataFrame の場合)
     if (data["text/html"]) {
       return (
-        <Box p={2} bg="gray.200" borderRadius="md" overflow="auto">
+        <Box
+          p={2}
+          bg="white"
+          borderRadius="md"
+          overflowX="auto"
+          border="1px solid var(--border-color)"
+          sx={{
+            maxWidth: "100%",
+            padding: "10px",
+            overflowX: "auto",
+          }}
+        >
+          <style>
+            {`
+              table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 14px;
+              }
+              th, td {
+                padding: 8px;
+                border: 1px solid #ddd;
+                text-align: left;
+              }
+              th {
+                background-color: #f4f4f4;
+              }
+              tbody tr:nth-child(odd) {
+                background-color: #f9f9f9;
+              }
+              tbody tr:hover {
+                background-color: #f1f1f1;
+              }
+            `}
+          </style>
           <div dangerouslySetInnerHTML={{ __html: data["text/html"].join("\n") }} />
         </Box>
       );
