@@ -7,7 +7,7 @@ import { Box } from "@yamada-ui/react";
 
 export const App = () => {
   return (
-    <Router>
+    <Router basename='/jupyeek'>
       <Box minH="100vh" display="flex" flexDirection="column">
         <Header />
         <Box flex="1">
