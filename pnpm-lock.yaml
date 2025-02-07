@@ -11,6 +11,9 @@ importers:
       '@yamada-ui/dropzone':
         specifier: ^1.1.5
         version: 1.1.5(@emotion/is-prop-valid@1.3.1)(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@yamada-ui/lucide':
+        specifier: ^1.10.3
+        version: 1.10.3(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@yamada-ui/react':
         specifier: ^1.7.4
         version: 1.7.4(@emotion/is-prop-valid@1.3.1)(@emotion/react@11.11.0(@types/react@19.0.8)(react@19.0.0))(@emotion/styled@11.11.0(@emotion/react@11.11.0(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(motion@11.18.2(@emotion/is-prop-valid@1.3.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -1095,6 +1098,11 @@ packages:
 
   '@yamada-ui/loading@1.1.30':
     resolution: {integrity: sha512-3gIdyQLFrfdtnt7Wli+YeUo0axU/nZcUvEUdxYwzfbRTz4MFHssRXoys/trDyxxE3C5gEtP2BCKz7gpwNCeEJA==}
+    peerDependencies:
+      react: '>=18'
+
+  '@yamada-ui/lucide@1.10.3':
+    resolution: {integrity: sha512-c/6hR7oBiIfhHj1hyfaRKs+u2d+aiB4atOOyo6Ow/j1Eet4jXPNDTIot/sjiBYUy9aylcZquC2Cb8OxROsPMuw==}
     peerDependencies:
       react: '>=18'
 
@@ -2540,6 +2548,11 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  lucide-react@0.464.0:
+    resolution: {integrity: sha512-eCx1qClbnw5qRqB2Z1AFFp71wdJXEwhPp5ii8LviyvHb7o/7eMXFiTyDHh7JpjM9BO9pC6ZUp/c7mCwwxbPIcg==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
 
   map-limit@0.0.1:
     resolution: {integrity: sha512-pJpcfLPnIF/Sk3taPW21G/RQsEEirGaFpCW3oXRwH9dnFHPHNGjNyvh++rdmC2fNqEaTw2MhYJraoJWAHx8kEg==}
@@ -4932,6 +4945,18 @@ snapshots:
       - react-dom
       - supports-color
 
+  '@yamada-ui/lucide@1.10.3(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@yamada-ui/core': 1.17.1(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@yamada-ui/icon': 1.1.19(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@yamada-ui/utils': 1.7.0(react@19.0.0)
+      lucide-react: 0.464.0(react@19.0.0)
+      react: 19.0.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+      - supports-color
+
   '@yamada-ui/menu@1.5.4(@emotion/is-prop-valid@1.3.1)(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@yamada-ui/core': 1.17.1(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -6897,6 +6922,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-react@0.464.0(react@19.0.0):
+    dependencies:
+      react: 19.0.0
 
   map-limit@0.0.1:
     dependencies:
